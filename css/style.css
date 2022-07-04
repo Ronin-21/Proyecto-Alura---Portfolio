@@ -1,0 +1,32 @@
+/*-------------VARIABLES--------------*/
+:root {
+  --color-primario: #d11710;
+  --color-primario_oscuro: #690000;
+  --color-secundario: #10cad1;
+  --color-secundario_oscuro: #006169;
+  --bg-color_a: #191919;
+  --bg-color_b: #101010;
+  --color-fuente_gris: #8e8e8e;
+  --color-fuente_oscuro: #101010;
+  --color-fuente_claro: #fbfbfb;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --fuente-principal: "Poppins", sans-serif;
+  --fuente-titulo: "Josefin Sans", sans-serif;
+  --fuente-subtitulo: "Rubik", sans-serif;
+  --sombra: 4px 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/*-------------COMPONENTES------------*/
+
+/*--------------UTILIDADES------------*/
+html {
+  font-family: var(--fuente-principal);
+  font-size: 10px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/*---------------INICIO---------------*/
