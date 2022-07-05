@@ -19,14 +19,152 @@
 
 /*-------------COMPONENTES------------*/
 
-/*--------------UTILIDADES------------*/
+/*----------AJUSTES GENERALES----------*/
 html {
   font-family: var(--fuente-principal);
   font-size: 10px;
+}
+
+body {
+  background-color: var(--bg-color_b);
+  color: var(--color-fuente_claro);
 }
 
 p {
   line-height: 1.6;
 }
 
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1600px;
+}
+
+.none {
+  display: none !important;
+}
+
 /*---------------INICIO---------------*/
+/*------MOBILE FIRST---------*/
+
+.header {
+  position: relative;
+  min-height: 100vh;
+  background-image: url(../img/Banner.jpg);
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--bg-color_a);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.header__hero :is(h3, h1, h2) {
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-family: var(--fuente-subtitulo);
+}
+
+.header__hero h3 {
+  margin-left: -2rem;
+  color: var(--color-fuente_gris);
+}
+
+.header__hero h1 {
+  font-size: 3rem;
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+}
+
+.header__hero h2 {
+  margin-left: 2rem;
+  color: var(--color-secundario);
+}
+
+.header__hero h2::after,
+.header__hero h2::before {
+  color: var(--color-primario);
+  font-weight: 500;
+}
+.header__hero h2::after {
+  content: " />";
+}
+.header__hero h2::before {
+  content: "< ";
+}
+
+/*------MENU-------*/
+.nav {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0, 96, 105, 0.5);
+}
+
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav__menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-color_a);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.show-menu {
+  left: 0;
+}
+
+.nav__menu a {
+  font-size: 3rem;
+}
+
+.nav__logo {
+  width: 30rem;
+}
+
+.nav__menu-btn {
+  width: 6rem;
+  height: 5rem;
+  color: var(--color-fuente_claro);
+  background-color: var(--color-primario);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav__menu-btn i {
+  font-size: 3rem;
+}
+
+/*-----HOVER-----*/
+
+/*---------------*/

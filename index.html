@@ -17,36 +17,50 @@
       src="https://kit.fontawesome.com/eb9fc79dc8.js"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="">Inicio</a>
-        <a href="">Sobre mi</a>
-        <a href="">Habilidades</a>
-        <a href="">Proyectos</a>
-        <a href="">Contacto</a>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__container container">
+          <div class="nav__logo">
+            <a href="index.html"
+              ><img src="img/Logo.png" alt="Ronin WebDesign Logo"
+            /></a>
+          </div>
+          <button class="nav__menu-btn">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark none"></i>
+          </button>
+          <div class="nav__menu">
+            <a href="#inicio" data-after="Inicio">Inicio</a>
+            <a href="#sobre-mi" data-after="Sobre mi">Sobre mi</a>
+            <a href="#habilidades" data-after="Habilidades">Habilidades</a>
+            <a href="#proyectos" data-after="Proyectos">Proyectos</a>
+            <a href="#contacto" data-after="Contacto">Contacto</a>
+          </div>
+        </div>
       </nav>
-      <div>
+      <div class="header__hero">
         <h3>Hola mundo!...</h3>
         <h1>Soy Abel Alejandro Acuña</h1>
         <h2>Front-End Developer</h2>
       </div>
     </header>
     <main>
-      <section>
+      <section id="inicio" class="home">
         <h2>Inicio</h2>
       </section>
-      <section>
+      <section id="sobre-mi" class="about-me">
         <h2>Sobre mi</h2>
       </section>
-      <section>
+      <section id="habilidades" class="skills">
         <h2>Habilidades</h2>
       </section>
-      <section>
+      <section id="proyectos" class="projetcs">
         <h2>Proyectos</h2>
       </section>
-      <section>
+      <section id="contacto" class="contact">
         <h2>Contacto</h2>
       </section>
     </main>
