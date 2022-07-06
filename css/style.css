@@ -18,6 +18,34 @@
 }
 
 /*-------------COMPONENTES------------*/
+.btn {
+  background-color: var(--color-primario);
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border: 0.2rem solid var(--color-primario);
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-title {
+  padding: 0.7rem 0;
+  font-family: var(--fuente-subtitulo);
+  font-size: 6.4vw;
+  font-weight: 500;
+}
 
 /*----------AJUSTES GENERALES----------*/
 html {
@@ -34,23 +62,19 @@ p {
   line-height: 1.6;
 }
 
-.container {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1600px;
-}
-
-.none {
-  display: none !important;
+span {
+  color: var(--color-primario);
+  font-size: inherit;
 }
 
 /*---------------INICIO---------------*/
 /*------MOBILE FIRST---------*/
 
-.header {
+.home {
   position: relative;
   min-height: 100vh;
   background-image: url(../img/Banner.jpg);
+  background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
@@ -58,50 +82,60 @@ p {
   z-index: 1;
 }
 
-.header::after {
+.home::after {
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--bg-color_a);
-  opacity: 0.7;
+  background: linear-gradient(
+    90deg,
+    rgba(105, 0, 0, 1) 0%,
+    rgba(0, 97, 105, 1) 100%
+  );
+  opacity: 0.3;
   z-index: -1;
 }
 
-.header__hero :is(h3, h1, h2) {
-  padding: 1rem 0;
-  font-size: 2rem;
-  font-family: var(--fuente-subtitulo);
+.hero {
+  min-width: 90%;
+  margin: 0 3rem;
 }
 
-.header__hero h3 {
-  margin-left: -2rem;
-  color: var(--color-fuente_gris);
-}
-
-.header__hero h1 {
-  font-size: 3rem;
+.hero__title {
+  font-size: 14vw;
   font-family: var(--fuente-titulo);
   font-weight: 700;
+  padding-left: 2rem;
+  margin-top: 0.7rem;
 }
 
-.header__hero h2 {
-  margin-left: 2rem;
+.hero__post-title {
+  padding-left: 4rem;
   color: var(--color-secundario);
 }
 
-.header__hero h2::after,
-.header__hero h2::before {
+.hero__post-title::after,
+.hero__post-title::before {
   color: var(--color-primario);
   font-weight: 500;
 }
-.header__hero h2::after {
+.hero__post-title::after {
   content: " />";
 }
-.header__hero h2::before {
+.hero__post-title::before {
   content: "< ";
+}
+
+.hero__buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.hero__buttons a {
+  font-size: 1.5rem;
 }
 
 /*------MENU-------*/
@@ -116,8 +150,7 @@ p {
 }
 
 .nav__container {
-  display: flex;
-  align-items: center;
+  height: 100%;
   justify-content: space-between;
   gap: 2rem;
 }
@@ -125,8 +158,8 @@ p {
 .nav__menu {
   position: absolute;
   top: 0;
-  left: 100%;
-  width: 100%;
+  right: 0;
+  width: 0;
   height: 100vh;
   background-color: var(--bg-color_a);
   display: flex;
@@ -135,11 +168,7 @@ p {
   justify-content: center;
   gap: 2rem;
   overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.show-menu {
-  left: 0;
+  transition: all 0.3s ease-out;
 }
 
 .nav__menu a {
@@ -152,7 +181,7 @@ p {
 
 .nav__menu-btn {
   width: 6rem;
-  height: 5rem;
+  height: 4.5rem;
   color: var(--color-fuente_claro);
   background-color: var(--color-primario);
   margin: 1rem 0;
@@ -166,5 +195,66 @@ p {
 }
 
 /*-----HOVER-----*/
-
 /*---------------*/
+
+/*---------ABOUT-----------*/
+.about-me {
+  padding: 3rem 0;
+  flex-direction: column;
+}
+
+/*---------MODIFICADORES-----------*/
+
+.show-menu {
+  width: 100%;
+}
+
+.none {
+  display: none !important;
+}
+
+/*----------MEDIA QUERIES-----------*/
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  /*-----COMPONENTS------*/
+  .sub-title {
+    font-size: 3.5vw;
+  }
+
+  /*-----HEADER------*/
+  .hero {
+    min-width: 60%;
+  }
+  .hero__title {
+    font-size: 9vw;
+  }
+
+  /*-----MENU-----*/
+  .nav {
+    height: 6rem;
+  }
+  .nav__menu {
+    position: relative;
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    flex-direction: row;
+    justify-content: end;
+    gap: 0;
+  }
+  .nav__menu a {
+    font-size: 1.6rem;
+    padding: 1.5rem 1rem;
+    height: 100%;
+    transition: all 0.3s ease-in;
+  }
+  .nav__menu a:hover {
+    background-color: var(--color-primario);
+  }
+  .nav__menu-btn {
+    display: none;
+  }
+}

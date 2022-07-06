@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins&family=Rubik:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@400;600&family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/reset.css" />
@@ -20,7 +20,7 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <header id="inicio" class="home">
       <nav class="nav">
         <div class="nav__container container">
           <div class="nav__logo">
@@ -41,27 +41,45 @@
           </div>
         </div>
       </nav>
-      <div class="header__hero">
-        <h3>Hola mundo!...</h3>
-        <h1>Soy Abel Alejandro Acuña</h1>
-        <h2>Front-End Developer</h2>
+      <div class="hero">
+        <h3 class="hero__pre-title sub-title">
+          Hola<span>!</span> Mi nombre es...
+        </h3>
+        <h1 class="hero__title">Abel <span>Acuña</span></h1>
+        <h2 class="hero__post-title sub-title">Front-End Developer</h2>
+        <div class="hero__buttons">
+          <button class="btn"><a href="#contacto">Contáctame</a></button>
+          <button class="btn btn--secondary">
+            <a href="#">Descargar CV</a>
+          </button>
+        </div>
       </div>
     </header>
     <main>
-      <section id="inicio" class="home">
-        <h2>Inicio</h2>
+      <section id="sobre-mi" class="about-me container">
+        <h2 class="sub-title">Sobre mi</h2>
+        <div class="about-me__container">
+          <img src="img/Perfil-2.jpg" alt="Abel Acuña" />
+          <h3>Abel Alejandro Acuña</h3>
+          <h4>Desarrollador Front-End</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis rem
+            minus eius, voluptatem eveniet provident esse velit magnam similique
+            consequuntur delectus possimus impedit minima porro. Veritatis vel
+            eum fugit repellendus, quae aperiam eius consectetur fuga hic
+            laboriosam, ad voluptas facere. Aperiam, vero aspernatur? Porro
+            illum quam ex in accusamus quod.
+          </p>
+        </div>
       </section>
-      <section id="sobre-mi" class="about-me">
-        <h2>Sobre mi</h2>
+      <section id="habilidades" class="skills container">
+        <h2 class="sub-title">Habilidades</h2>
       </section>
-      <section id="habilidades" class="skills">
-        <h2>Habilidades</h2>
+      <section id="proyectos" class="projetcs container">
+        <h2 class="sub-title">Proyectos</h2>
       </section>
-      <section id="proyectos" class="projetcs">
-        <h2>Proyectos</h2>
-      </section>
-      <section id="contacto" class="contact">
-        <h2>Contacto</h2>
+      <section id="contacto" class="contact container">
+        <h2 class="sub-title">Contacto</h2>
       </section>
     </main>
     <footer>
