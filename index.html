@@ -21,35 +21,49 @@
   </head>
   <body>
     <header id="inicio" class="home">
-      <nav class="nav">
-        <div class="nav__container container">
-          <div class="nav__logo">
-            <a href="index.html"
-              ><img src="img/Logo.png" alt="Ronin WebDesign Logo"
-            /></a>
+      <div class="overlay">
+        <nav class="nav">
+          <div class="nav__container container">
+            <div class="nav__logo">
+              <a href="index.html"
+                ><img src="img/Logo.png" alt="Ronin WebDesign Logo"
+              /></a>
+            </div>
+            <button class="nav__menu-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+                />
+              </svg>
+              <svg
+                class="hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 320 512"
+              >
+                <path
+                  d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                />
+              </svg>
+            </button>
+            <div class="nav__menu">
+              <a href="#inicio" data-after="Inicio">Inicio</a>
+              <a href="#sobre-mi" data-after="Sobre mi">Sobre mi</a>
+              <a href="#habilidades" data-after="Habilidades">Habilidades</a>
+              <a href="#proyectos" data-after="Proyectos">Proyectos</a>
+              <a href="#contacto" data-after="Contacto">Contacto</a>
+            </div>
           </div>
-          <button class="nav__menu-btn">
-            <i class="fa-solid fa-bars"></i>
-            <i class="fa-solid fa-xmark none"></i>
-          </button>
-          <div class="nav__menu">
-            <a href="#inicio" data-after="Inicio">Inicio</a>
-            <a href="#sobre-mi" data-after="Sobre mi">Sobre mi</a>
-            <a href="#habilidades" data-after="Habilidades">Habilidades</a>
-            <a href="#proyectos" data-after="Proyectos">Proyectos</a>
-            <a href="#contacto" data-after="Contacto">Contacto</a>
+        </nav>
+        <div class="hero">
+          <h3 class="hero__pre-title sub-title">Hola mundo! Soy</h3>
+          <h1 class="hero__title title">Abel <span>Acuña</span></h1>
+          <h2 class="hero__post-title sub-title">Front-End Developer</h2>
+          <div class="hero__buttons">
+            <button class="btn"><a href="#contacto">Contáctame</a></button>
+            <button class="btn btn--secondary">
+              <a href="#">Descargar CV</a>
+            </button>
           </div>
-        </div>
-      </nav>
-      <div class="hero">
-        <h3 class="hero__pre-title sub-title">Hola mundo! Soy</h3>
-        <h1 class="hero__title title">Abel <span>Acuña</span></h1>
-        <h2 class="hero__post-title sub-title">Front-End Developer</h2>
-        <div class="hero__buttons">
-          <button class="btn"><a href="#contacto">Contáctame</a></button>
-          <button class="btn btn--secondary">
-            <a href="#">Descargar CV</a>
-          </button>
         </div>
       </div>
     </header>
@@ -122,53 +136,185 @@
         <h2 class="title">Proyectos</h2>
         <div class="portfolio__container">
           <div class="portfolio__card">
-            <img src="" alt="JPG" />
-            <div class="portfolio__card-info">
-              <h3>Proyecto 1</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt totam qui magni asperiores! Iste, sit!
-              </p>
+            <img src="https://picsum.photos/600" alt="JPG" />
+            <div class="overlay">
+              <div class="portfolio__card-info">
+                <h3 class="sub-title">Proyecto 1</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt totam qui magni asperiores! Iste, sit!
+                </p>
+                <div class="portfolio__card-buttons">
+                  <button class="btn">
+                    <a href="#contacto">Ropositorio</a>
+                  </button>
+                  <button class="btn btn--secondary">
+                    <a href="#">Ver Demo</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden show-lateral_info">
+            <h3 class="sub-title">Proyecto 1</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              totam qui magni asperiores! Iste, sit!
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a href="#contacto">Ropositorio</a>
+              </button>
+              <button class="btn btn--secondary">
+                <a href="#">Ver Demo</a>
+              </button>
+            </div>
+          </div>
+          <div class="hidden show-lateral_info">
+            <h3 class="sub-title">Proyecto 2</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              totam qui magni asperiores! Iste, sit!
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a href="#contacto">Ropositorio</a>
+              </button>
+              <button class="btn btn--secondary">
+                <a href="#">Ver Demo</a>
+              </button>
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="" alt="JPG" />
-            <div class="portfolio__card-info">
-              <h3>Proyecto 2</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt totam qui magni asperiores! Iste, sit!
-              </p>
+            <img src="https://picsum.photos/600" alt="JPG" />
+            <div class="overlay">
+              <div class="portfolio__card-info">
+                <h3 class="sub-title">Proyecto 2</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt totam qui magni asperiores! Iste, sit!
+                </p>
+                <div class="portfolio__card-buttons">
+                  <button class="btn">
+                    <a href="#contacto">Ropositorio</a>
+                  </button>
+                  <button class="btn btn--secondary">
+                    <a href="#">Ver Demo</a>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="" alt="JPG" />
-            <div class="portfolio__card-info">
-              <h3>Proyecto 3</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt totam qui magni asperiores! Iste, sit!
-              </p>
+            <img src="https://picsum.photos/600" alt="JPG" />
+            <div class="overlay">
+              <div class="portfolio__card-info">
+                <h3 class="sub-title">Proyecto 3</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt totam qui magni asperiores! Iste, sit!
+                </p>
+                <div class="portfolio__card-buttons">
+                  <button class="btn">
+                    <a href="#contacto">Ropositorio</a>
+                  </button>
+                  <button class="btn btn--secondary">
+                    <a href="#">Ver Demo</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden show-lateral_info">
+            <h3 class="sub-title">Proyecto 3</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              totam qui magni asperiores! Iste, sit!
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a href="#contacto">Ropositorio</a>
+              </button>
+              <button class="btn btn--secondary">
+                <a href="#">Ver Demo</a>
+              </button>
+            </div>
+          </div>
+          <div class="hidden show-lateral_info">
+            <h3 class="sub-title">Proyecto 4</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              totam qui magni asperiores! Iste, sit!
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a href="#contacto">Ropositorio</a>
+              </button>
+              <button class="btn btn--secondary">
+                <a href="#">Ver Demo</a>
+              </button>
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="" alt="JPG" />
-            <div class="portfolio__card-info">
-              <h3>Proyecto 4</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt totam qui magni asperiores! Iste, sit!
-              </p>
+            <img src="https://picsum.photos/600" alt="JPG" />
+            <div class="overlay">
+              <div class="portfolio__card-info">
+                <h3 class="sub-title">Proyecto 4</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt totam qui magni asperiores! Iste, sit!
+                </p>
+                <div class="portfolio__card-buttons">
+                  <button class="btn">
+                    <a href="#contacto">Ropositorio</a>
+                  </button>
+                  <button class="btn btn--secondary">
+                    <a href="#">Ver Demo</a>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       <section id="contacto" class="contact container-fullscreen">
         <h2 class="title">Contacto</h2>
+        <div class="contact__container">
+          <form action="" class="contact__form">
+            <input
+              type="text"
+              name="name"
+              placeholder="Ingresa tu nombre *"
+              title="Nombre sólo acepta letras y espacios en blanco"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Ingresa tu correo *"
+              title="Email incorrecto"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+              required
+            />
+            <textarea
+              name="comments"
+              placeholder="Déjame tus comentarios *"
+              required
+            ></textarea>
+            <input class="btn" type="submit" value="Enviar Mensaje" />
+          </form>
+        </div>
+        <div class="modal"></div>
       </section>
     </main>
-    <footer>
-      <h4></h4>
+    <footer class="footer container">
+      <h4>Ronin WebDesign || Abel Alejandro Acuña</h4>
+      <div class="social-links">
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+      </div>
     </footer>
   </body>
 </html>

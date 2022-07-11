@@ -5,14 +5,14 @@ const links = document.querySelectorAll(".nav__menu a");
 
 menuBtn.addEventListener("click", () => {
   menu.classList.toggle("show-menu");
-  menuBtn.firstElementChild.classList.toggle("none");
-  menuBtn.lastElementChild.classList.toggle("none");
+  menuBtn.firstElementChild.classList.toggle("hidden");
+  menuBtn.lastElementChild.classList.toggle("hidden");
 });
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     menu.classList.remove("show-menu");
-    menuBtn.firstElementChild.classList.toggle("none");
-    menuBtn.lastElementChild.classList.toggle("none");
+    menuBtn.firstElementChild.classList.toggle("hidden");
+    menuBtn.lastElementChild.classList.toggle("hidden");
   });
 });
