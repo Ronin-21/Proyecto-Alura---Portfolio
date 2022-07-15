@@ -4,7 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Abel Alejandro Acuña</title>
+    <!-- META-TAGS SEO & SOCIAL MEDIA -->
+    <title>Abel Alejandro Acuña - Portafolio</title>
+    <meta
+      name="description"
+      content="Hola bienvenido a mi Portafolio Profesional, soy Abel Acuña Front-End Developer"
+    />
+    <link rel="canonical" href="url sitio" />
+    <link rel="favicon" href="url favicon" />
+    <link rel="apple-touch-icon" href="url favicon" />
+    <meta name="theme-color" content="#d11710" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      property="og:title"
+      name="twitter:title"
+      content="Abel Alejandro Acuña - Portafolio"
+    />
+    <meta property="og:image" name="twitter:image" content="url banner" />
+    <meta property="og:url" name="twitter:url" content="url sitio" />
+    <meta
+      property="og:description"
+      name="twitter:description"
+      content="Hola bienvenido a mi Portafolio Profesional, soy Abel Acuña Front-End Developer"
+    />
+    <!-- LINKS CSS & FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,15 +37,21 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- LINKS SCRIPTS -->
     <script
       src="https://kit.fontawesome.com/eb9fc79dc8.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/script.js" defer></script>
+    <script src="js/menu.js" defer></script>
+    <script src="js/modalSlider.js" defer></script>
+    <script src="js/form.js" defer></script>
   </head>
   <body>
+    <!-- HOME -->
     <header id="inicio" class="home">
       <div class="overlay">
+        <!-- NAVIGATION -->
         <nav class="nav">
           <div class="nav__container container">
             <div class="nav__logo">
@@ -54,6 +84,8 @@
             </div>
           </div>
         </nav>
+        <!-- END NAVIGATION -->
+        <!-- HERO -->
         <div class="hero">
           <h3 class="hero__pre-title sub-title">Hola mundo! Soy</h3>
           <h1 class="hero__title title">Abel <span>Acuña</span></h1>
@@ -65,9 +97,12 @@
             </button>
           </div>
         </div>
+        <!-- END HERO -->
       </div>
     </header>
+    <!-- END HOME -->
     <main>
+      <!-- ABOUT ME -->
       <section id="sobre-mi" class="about-me container media-fulscreen">
         <h2 class="title">Sobre mi</h2>
         <img src="img/Perfil-2.jpg" alt="Abel Acuña" />
@@ -86,12 +121,28 @@
             <a href="#">Descargar CV</a>
           </button>
           <div class="social-links">
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a
+              href="https://www.facebook.com/abel.acuna.9"
+              rel="noreferer noopener"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/abel-alejandro-acu%C3%B1a-lasarte-7040b823b/"
+              rel="noreferer noopener"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/Ronin-21"
+              rel="noreferer noopener"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </div>
         </div>
       </section>
+      <!-- SKILLS -->
       <section id="habilidades" class="skills container-fullscreen">
         <h2 class="title">Habilidades</h2>
         <div class="skills__cards card-container">
@@ -132,11 +183,48 @@
           </div>
         </div>
       </section>
+      <!-- PORTFOLIO -->
       <section id="proyectos" class="portfolio container">
         <h2 class="title">Proyectos</h2>
+        <!-- PORTFOLIO MODAL -->
+        <div class="modal-container" id="portfolio__modal-container">
+          <div class="modal portfolio__modal-content">
+            <h3 class="sub-title">Proyecto 1</h3>
+            <img id="portfolio__modal-img" src="" alt="JPG" />
+            <div class="modal__buttons">
+              <button id="modal__prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                  <path
+                    d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"
+                  />
+                </svg>
+              </button>
+              <button id="modal__next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                  <path
+                    d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="modal__close">
+              <button id="modal__close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <path
+                    d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- END PORTFOLIO MODAL -->
         <div class="portfolio__container">
           <div class="portfolio__card">
-            <img src="https://picsum.photos/600" alt="JPG" />
+            <img src="https://picsum.photos/600?random=1" alt="JPG" />
+            <img src="https://picsum.photos/600?random=6" alt="JPG" />
+            <img src="https://picsum.photos/600?random=7" alt="JPG" />
+            <img src="https://picsum.photos/600?random=8" alt="JPG" />
             <div class="overlay">
               <div class="portfolio__card-info">
                 <h3 class="sub-title">Proyecto 1</h3>
@@ -186,7 +274,7 @@
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="https://picsum.photos/600" alt="JPG" />
+            <img src="https://picsum.photos/600?random=2" alt="JPG" />
             <div class="overlay">
               <div class="portfolio__card-info">
                 <h3 class="sub-title">Proyecto 2</h3>
@@ -206,7 +294,7 @@
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="https://picsum.photos/600" alt="JPG" />
+            <img src="https://picsum.photos/600?random=3" alt="JPG" />
             <div class="overlay">
               <div class="portfolio__card-info">
                 <h3 class="sub-title">Proyecto 3</h3>
@@ -256,7 +344,7 @@
             </div>
           </div>
           <div class="portfolio__card">
-            <img src="https://picsum.photos/600" alt="JPG" />
+            <img src="https://picsum.photos/600?random=4" alt="JPG" />
             <div class="overlay">
               <div class="portfolio__card-info">
                 <h3 class="sub-title">Proyecto 4</h3>
@@ -277,44 +365,81 @@
           </div>
         </div>
       </section>
-      <section id="contacto" class="contact container-fullscreen">
-        <h2 class="title">Contacto</h2>
-        <div class="contact__container">
-          <form action="" class="contact__form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Ingresa tu nombre *"
-              title="Nombre sólo acepta letras y espacios en blanco"
-              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Ingresa tu correo *"
-              title="Email incorrecto"
-              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-              required
-            />
-            <textarea
-              name="comments"
-              placeholder="Déjame tus comentarios *"
-              required
-            ></textarea>
-            <input class="btn" type="submit" value="Enviar Mensaje" />
-          </form>
+      <!-- CONTACT -->
+      <section id="contacto" class="contact">
+        <div class="overlay">
+          <h2 class="title">Contacto</h2>
+          <div class="contact__container">
+            <form class="contact__form" id="contact__form">
+              <input
+                id="contact__form-name"
+                type="text"
+                name="name"
+                placeholder="Ingresa tu nombre *"
+                title="Nombre sólo acepta letras y espacios en blanco"
+                required
+              />
+              <input
+                id="contact__form-email"
+                type="email"
+                name="email"
+                placeholder="Ingresa tu correo *"
+                title="Email debe contener @ejemplo.com"
+                required
+              />
+              <textarea
+                id="contact__form-comments"
+                name="comments"
+                placeholder="Déjame tus comentarios *"
+                required
+              ></textarea>
+              <input class="btn" type="submit" value="Enviar Mensaje" />
+            </form>
+          </div>
         </div>
-        <div class="modal"></div>
+        <div class="modal-container" id="contact__modal">
+          <div class="modal contact__modal">
+            <h3>
+              Muchas gracias por contactarme!<br />
+              Te escribiré pronto
+            </h3>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path
+                d="M130.7 313.9C126.5 300.4 137.8 288 151.1 288H364.5C378.7 288 389.9 300.4 385.8 313.9C368.1 368.4 318.2 408 258.2 408C198.2 408 147.5 368.4 130.7 313.9V313.9zM217.6 228.8L217.6 228.8L217.4 228.5C217.2 228.3 217 228 216.7 227.6C216 226.8 215.1 225.7 213.9 224.3C211.4 221.4 207.9 217.7 203.7 213.1C194.9 206.2 184.8 200 176 200C167.2 200 157.1 206.2 148.3 213.1C144.1 217.7 140.6 221.4 138.1 224.3C136.9 225.7 135.1 226.8 135.3 227.6C134.1 228 134.8 228.3 134.6 228.5L134.4 228.8L134.4 228.8C132.3 231.6 128.7 232.7 125.5 231.6C122.2 230.5 120 227.4 120 224C120 206.1 126.7 188.4 136.6 175.2C146.4 162.2 160.5 152 176 152C191.5 152 205.6 162.2 215.4 175.2C225.3 188.4 232 206.1 232 224C232 227.4 229.8 230.5 226.5 231.6C223.3 232.7 219.7 231.6 217.6 228.8V228.8zM377.6 228.8L377.4 228.5C377.2 228.3 377 228 376.7 227.6C376 226.8 375.1 225.7 373.9 224.3C371.4 221.4 367.9 217.7 363.7 213.1C354.9 206.2 344.8 200 336 200C327.2 200 317.1 206.2 308.3 213.1C304.1 217.7 300.6 221.4 298.1 224.3C296.9 225.7 295.1 226.8 295.3 227.6C294.1 228 294.8 228.3 294.6 228.5L294.4 228.8L294.4 228.8C292.3 231.6 288.7 232.7 285.5 231.6C282.2 230.5 280 227.4 280 224C280 206.1 286.7 188.4 296.6 175.2C306.4 162.2 320.5 152 336 152C351.5 152 365.6 162.2 375.4 175.2C385.3 188.4 392 206.1 392 224C392 227.4 389.8 230.5 386.5 231.6C383.3 232.7 379.7 231.6 377.6 228.8L377.6 228.8zM512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 48C141.1 48 48 141.1 48 256C48 370.9 141.1 464 256 464C370.9 464 464 370.9 464 256C464 141.1 370.9 48 256 48z"
+              />
+            </svg>
+          </div>
+        </div>
       </section>
     </main>
+    <!-- FOOTER -->
     <footer class="footer container">
-      <h4>Ronin WebDesign || Abel Alejandro Acuña</h4>
+      <h4>Abel Alejandro <span>Acuña</span></h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aperiam
+        aut eaque id neque cum?
+      </p>
       <div class="social-links">
-        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a
+          href="https://www.facebook.com/abel.acuna.9"
+          rel="noreferer noopener"
+          target="_blank"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/abel-alejandro-acu%C3%B1a-lasarte-7040b823b/"
+          rel="noreferer noopener"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a
+          href="https://github.com/Ronin-21"
+          rel="noreferer noopener"
+          target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
       </div>
+      <p class="copyright">CopyRight By Abel Alejandro Acuña</p>
     </footer>
   </body>
 </html>
