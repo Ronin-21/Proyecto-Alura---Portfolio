@@ -11,8 +11,8 @@
       content="Hola bienvenido a mi Portafolio Profesional, soy Abel Acuña Front-End Developer"
     />
     <link rel="canonical" href="url sitio" />
-    <link rel="favicon" href="url favicon" />
-    <link rel="apple-touch-icon" href="url favicon" />
+    <link rel="shortcut icon" href="img/logo/Icon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="url icon" />
     <meta name="theme-color" content="#d11710" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
@@ -37,12 +37,14 @@
     />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- LINKS SCRIPTS -->
     <script
       src="https://kit.fontawesome.com/eb9fc79dc8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/script.js" defer></script>
+    <script src="js/main.js" defer></script>
     <script src="js/menu.js" defer></script>
     <script src="js/modalSlider.js" defer></script>
     <script src="js/form.js" defer></script>
@@ -50,75 +52,101 @@
   <body>
     <!-- HOME -->
     <header id="inicio" class="home">
-      <div class="overlay">
-        <!-- NAVIGATION -->
-        <nav class="nav">
-          <div class="nav__container container">
-            <div class="nav__logo">
-              <a href="index.html"
-                ><img src="img/Logo.png" alt="Ronin WebDesign Logo"
-              /></a>
-            </div>
-            <button class="nav__menu-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                <path
-                  d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+      <!-- NAVIGATION -->
+      <nav class="nav" data-aos="fade-down" data-aos-duration="1000">
+        <div class="nav__container">
+          <div class="nav__logo">
+            <a href="index.html">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo/Logo-red.png"
                 />
-              </svg>
-              <svg
-                class="hidden"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 320 512"
-              >
-                <path
-                  d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
-                />
-              </svg>
-            </button>
-            <div class="nav__menu">
-              <a href="#inicio" data-after="Inicio">Inicio</a>
-              <a href="#sobre-mi" data-after="Sobre mi">Sobre mi</a>
-              <a href="#habilidades" data-after="Habilidades">Habilidades</a>
-              <a href="#proyectos" data-after="Proyectos">Proyectos</a>
-              <a href="#contacto" data-after="Contacto">Contacto</a>
-            </div>
+                <img src="img/logo/Logo-white.png" alt="Ronin WebDesign" />
+              </picture>
+            </a>
           </div>
-        </nav>
-        <!-- END NAVIGATION -->
-        <!-- HERO -->
-        <div class="hero">
-          <h3 class="hero__pre-title sub-title">Hola mundo! Soy</h3>
-          <h1 class="hero__title title">Abel <span>Acuña</span></h1>
-          <h2 class="hero__post-title sub-title">Front-End Developer</h2>
-          <div class="hero__buttons">
-            <button class="btn"><a href="#contacto">Contáctame</a></button>
-            <button class="btn btn--secondary">
-              <a href="#">Descargar CV</a>
-            </button>
+          <button class="nav__menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+              <path
+                d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"
+              />
+            </svg>
+            <svg
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+            >
+              <path
+                d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"
+              />
+            </svg>
+          </button>
+          <div class="nav__menu">
+            <a href="#inicio" data-text="Inicio">Inicio</a>
+            <a href="#sobre-mi" data-text="Sobre mi">Sobre mi</a>
+            <a href="#habilidades" data-text="Habilidades">Habilidades</a>
+            <a href="#proyectos" data-text="Proyectos">Proyectos</a>
+            <a href="#contacto" data-text="Contacto">Contacto</a>
+            <p class="links-hover" id="links-hover">ejemplo</p>
           </div>
         </div>
-        <!-- END HERO -->
+      </nav>
+      <!-- END NAVIGATION -->
+      <!-- HERO -->
+      <div class="hero" data-aos="fade-down" data-aos-duration="2000">
+        <h3 class="hero__pre-title sub-title">Hola mundo! Soy</h3>
+        <h1 class="hero__title title">Abel <span>Acuña</span></h1>
+        <h2 class="hero__post-title sub-title">
+          <span><</span> Front-End Developer <span>/></span>
+        </h2>
+        <div class="hero__buttons">
+          <button class="btn"><a href="#contacto">Contáctame</a></button>
+          <button class="btn--secondary">
+            <a href="Abel_Acuña-CV.pdf" download="">Descargar CV</a>
+          </button>
+        </div>
+      </div>
+      <!-- END HERO -->
+      <div class="btn-toTop" id="btn-toTop">
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path
+              d="M374.6 246.6C368.4 252.9 360.2 256 352 256s-16.38-3.125-22.62-9.375L224 141.3V448c0 17.69-14.33 31.1-31.1 31.1S160 465.7 160 448V141.3L54.63 246.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0l160 160C387.1 213.9 387.1 234.1 374.6 246.6z"
+            />
+          </svg>
+        </button>
       </div>
     </header>
     <!-- END HOME -->
     <main>
       <!-- ABOUT ME -->
-      <section id="sobre-mi" class="about-me container media-fulscreen">
-        <h2 class="title">Sobre mi</h2>
-        <img src="img/Perfil-2.jpg" alt="Abel Acuña" />
+      <section id="sobre-mi" class="about-me container">
+        <h2 class="title" data-aos="zoom-out" data-aos-duration="1000">
+          Sobre mi
+        </h2>
+        <div class="about-me__img">
+          <img src="img/Perfil.jpg" alt="Abel Acuña" />
+        </div>
         <div class="about-me__content">
           <h3 class="sub-title">Abel Alejandro Acuña</h3>
           <h4>Desarrollador Front-End</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis rem
-            minus eius, voluptatem eveniet provident esse velit magnam similique
-            consequuntur delectus possimus impedit minima porro. Veritatis vel
-            eum fugit repellendus, quae aperiam eius consectetur fuga hic
-            laboriosam, ad voluptas facere. Aperiam, vero aspernatur? Porro
-            illum quam ex in accusamus quod.
+            Apasionado por la tecnología, autodidacta, comprometido y
+            responsable. <br />
+            Hola! Mi nombre es Abel Acuña y soy de Argentina, desde pequeño fuí
+            un entusiasta aprendíz del mundo informático, siempre dispuesto a
+            asimilar nuevas tecnologías y afrontar desafíos con determinacíon.
+            <br />
+            Poseo conocimientos en manejo de tecnologías Front-End, actualmente
+            aprendiendo Frameworks de Javascript y en un futuro extenderme hacia
+            NodeJs, actualmente estoy cursando el Programa de Oracle Next
+            Education - ONE. <br />
+            Mi sueño es poder entrar en el Mercado IT y poder desarrollar todo
+            mi potencial como Profesional.
           </p>
-          <button class="btn btn--secondary">
-            <a href="#">Descargar CV</a>
+          <button class="btn--secondary">
+            <a href="Abel_Acuña-CV.pdf" download="">Descargar CV</a>
           </button>
           <div class="social-links">
             <a
@@ -143,53 +171,82 @@
         </div>
       </section>
       <!-- SKILLS -->
-      <section id="habilidades" class="skills container-fullscreen">
-        <h2 class="title">Habilidades</h2>
+      <section id="habilidades" class="skills">
+        <h2 class="title" data-aos="zoom-out" data-aos-duration="1000">
+          Habilidades
+        </h2>
         <div class="skills__cards card-container">
           <div class="card">
             <div class="card__img">
-              <img src="img/HTML5-Logo.svg" alt="Html Logo" />
+              <img src="img/skill/HTML5-Logo.svg" alt="Html Logo" />
             </div>
             <h5 class="sub-title">HTML 5</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="img/CSS3-Logo.svg" alt="Css Logo" />
+              <img src="img/skill/CSS3-Logo.svg" alt="Css Logo" />
             </div>
             <h5 class="sub-title">CSS 3</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="img/Javascrip-Logo.svg" alt="Javascript Logo" />
+              <img src="img/skill/Javascrip-Logo.svg" alt="Javascript Logo" />
             </div>
             <h5 class="sub-title">Javascript</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="img/Photoshop-Logo.svg" alt="Photoshop Logo" />
+              <img src="img/skill/Photoshop-Logo.svg" alt="Photoshop Logo" />
             </div>
             <h5 class="sub-title">Photoshop</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
           <div class="card">
             <div class="card__img">
-              <img src="img/CorelDraw-Logo.svg" alt="Corel Logo" />
+              <img src="img/skill/CorelDraw-Logo.svg" alt="Corel Logo" />
             </div>
             <h5 class="sub-title">Corel Draw</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+      <section class="skills hobbies">
+        <h2 class="title" data-aos="zoom-out" data-aos-duration="1000">
+          Hobbies
+        </h2>
+        <div class="skills__cards card-container">
+          <div class="card">
+            <div class="card__img">
+              <img src="img/skill/Tennis.png" alt="Pelota de Tennis" />
+            </div>
+            <h5 class="sub-title">Tenis</h5>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="img/skill/Chess.png" alt="Ajedrez" />
+            </div>
+            <h5 class="sub-title">Ajedrez</h5>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="img/skill/Guitar.png" alt="Guitarra" />
+            </div>
+            <h5 class="sub-title">Guitarra</h5>
+          </div>
+          <div class="card">
+            <div class="card__img">
+              <img src="img/skill/Play.png" alt="Gamming" />
+            </div>
+            <h5 class="sub-title">Gamming</h5>
           </div>
         </div>
       </section>
       <!-- PORTFOLIO -->
       <section id="proyectos" class="portfolio container">
-        <h2 class="title">Proyectos</h2>
+        <h2 class="title" data-aos="zoom-out" data-aos-duration="1000">
+          Proyectos
+        </h2>
         <!-- PORTFOLIO MODAL -->
         <div class="modal-container" id="portfolio__modal-container">
           <div class="modal portfolio__modal-content">
-            <h3 class="sub-title">Proyecto 1</h3>
             <img id="portfolio__modal-img" src="" alt="JPG" />
             <div class="modal__buttons">
               <button id="modal__prev">
@@ -220,115 +277,218 @@
         </div>
         <!-- END PORTFOLIO MODAL -->
         <div class="portfolio__container">
-          <div class="portfolio__card">
-            <img src="https://picsum.photos/600?random=1" alt="JPG" />
-            <img src="https://picsum.photos/600?random=6" alt="JPG" />
-            <img src="https://picsum.photos/600?random=7" alt="JPG" />
-            <img src="https://picsum.photos/600?random=8" alt="JPG" />
-            <div class="overlay">
-              <div class="portfolio__card-info">
-                <h3 class="sub-title">Proyecto 1</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt totam qui magni asperiores! Iste, sit!
-                </p>
-                <div class="portfolio__card-buttons">
-                  <button class="btn">
-                    <a href="#contacto">Ropositorio</a>
-                  </button>
-                  <button class="btn btn--secondary">
-                    <a href="#">Ver Demo</a>
-                  </button>
-                </div>
+          <div
+            class="portfolio__card"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <img src="img/projects/Encriptador1.png" alt="Encriptador" />
+            <img src="img/projects/Encriptador2.png" alt="Encriptador" />
+            <img src="img/projects/Encriptador3.png" alt="Encriptador" />
+            <img src="img/projects/Encriptador4.png" alt="Encriptador" />
+            <div class="portfolio__card-info">
+              <h3 class="sub-title">Encriptador de Texto</h3>
+              <p>
+                Proyecto de un encriptador de texto, posee la funcion de
+                encriptado y desencriptado siguiendo un parámetro ya fijado.
+                También tiene la funcionalidad de copiar el texto resultante al
+                portapapeles.
+              </p>
+              <div class="portfolio__card-buttons">
+                <button class="btn">
+                  <a
+                    href="https://github.com/Ronin-21/Proyecto-Alura---Encriptador"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    >Ropositorio</a
+                  >
+                </button>
+                <button class="btn--secondary">
+                  <a
+                    href="https://ronin-21.github.io/Proyecto-Alura---Encriptador/"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    >Ver Demo</a
+                  >
+                </button>
               </div>
             </div>
           </div>
-          <div class="hidden show-lateral_info">
-            <h3 class="sub-title">Proyecto 1</h3>
+          <div
+            class="hidden show-lateral_info"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
+            <h3 class="sub-title">Encriptador de Texto</h3>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              totam qui magni asperiores! Iste, sit!
+              Proyecto de un encriptador de texto, posee la funcion de
+              encriptado y desencriptado siguiendo un parámetro ya fijado.
+              También tiene la funcionalidad de copiar el texto resultante al
+              portapapeles.
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a
+                  href="https://github.com/Ronin-21/Proyecto-Alura---Encriptador"
+                  target="_blank"
+                  rel="noreferer noopener"
+                  >Ropositorio</a
+                >
+              </button>
+              <button class="btn--secondary">
+                <a
+                  href="https://ronin-21.github.io/Proyecto-Alura---Encriptador/"
+                  target="_blank"
+                  rel="noreferer noopener"
+                  >Ver Demo</a
+                >
+              </button>
+            </div>
+          </div>
+          <div
+            class="hidden show-lateral_info"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
+            <h3 class="sub-title">Juego del Ahorcado</h3>
+            <p>
+              En el proyecto se utilizó canvas para la horca, la validacion y
+              captura de las teclas al presionarse se hizo con Javascript.
+              <br />
+              Las letras acertadas o erróneas se van mostrando en pantalla y no
+              pueden repetirse.
+              <br />
+              También posee la función de agregar palabras, comenzar nuevo juego
+              y rendirse.
+            </p>
+            <div class="portfolio__card-buttons">
+              <button class="btn">
+                <a
+                  href="https://github.com/Ronin-21/Proyecto-Alura---Juego-Ahorcado"
+                  target="_blank"
+                  rel="noreferer noopener"
+                  >Ropositorio</a
+                >
+              </button>
+              <button class="btn--secondary">
+                <a
+                  href="https://ronin-21.github.io/Proyecto-Alura---Juego-Ahorcado/"
+                  target="_blank"
+                  rel="noreferer noopener"
+                  >Ver Demo</a
+                >
+              </button>
+            </div>
+          </div>
+          <div
+            class="portfolio__card"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
+            <img
+              src="img/projects/Juego_del_ahorcado1.png"
+              alt="Ahorcado Game"
+            />
+            <img
+              src="img/projects/Juego_del_ahorcado2.png"
+              alt="Ahorcado Game"
+            />
+            <img
+              src="img/projects/Juego_del_ahorcado3.png"
+              alt="Ahorcado Game"
+            />
+            <img
+              src="img/projects/Juego_del_ahorcado4.png"
+              alt="Ahorcado Game"
+            />
+            <div class="portfolio__card-info">
+              <h3 class="sub-title">Juego del Ahorcado</h3>
+              <p>
+                En el proyecto se utilizó canvas para la horca, la validacion y
+                captura de las teclas al presionarse se hizo con Javascript.
+                <br />
+                Las letras acertadas o erróneas se van mostrando en pantalla y
+                no pueden repetirse.
+                <br />
+                También posee la función de agregar palabras, comenzar nuevo
+                juego y rendirse.
+              </p>
+              <div class="portfolio__card-buttons">
+                <button class="btn">
+                  <a
+                    href="https://github.com/Ronin-21/Proyecto-Alura---Juego-Ahorcado"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    >Ropositorio</a
+                  >
+                </button>
+                <button class="btn--secondary">
+                  <a
+                    href="https://ronin-21.github.io/Proyecto-Alura---Juego-Ahorcado/"
+                    target="_blank"
+                    rel="noreferer noopener"
+                    >Ver Demo</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="portfolio__card"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <img src="img/projects/Portfolio1.png" alt="JPG" />
+            <img src="img/projects/Portfolio2.png" alt="JPG" />
+            <img src="img/projects/Portfolio3.png" alt="JPG" />
+            <img src="img/projects/Portfolio4.png" alt="JPG" />
+            <img src="img/projects/Portfolio5.png" alt="JPG" />
+            <div class="portfolio__card-info">
+              <h3 class="sub-title">Portfolio Personal</h3>
+              <p>
+                Portfolio creado sin frameworks, con HTML, CSS y Vanilla
+                Javascript. <br />
+                Se utilizó metodología BEM, menú hamburguesa, animaciones con
+                CSS y Javascript, Mobile first y un formulario de contacto
+                totalmente funcional.
+              </p>
+              <div class="portfolio__card-buttons">
+                <button class="btn">
+                  <a href="#contacto">Ropositorio</a>
+                </button>
+                <button class="btn--secondary">
+                  <a href="#">Ver Demo</a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden show-lateral_info"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
+            <h3 class="sub-title">Portfolio Personal</h3>
+            <p>
+              Portfolio creado sin frameworks, con HTML, CSS y Vanilla
+              Javascript. <br />
+              Se utilizó metodología BEM, menú hamburguesa, animaciones con CSS
+              y Javascript, Mobile first y un formulario de contacto totalmente
+              funcional.
             </p>
             <div class="portfolio__card-buttons">
               <button class="btn">
                 <a href="#contacto">Ropositorio</a>
               </button>
-              <button class="btn btn--secondary">
+              <button class="btn--secondary">
                 <a href="#">Ver Demo</a>
               </button>
             </div>
           </div>
-          <div class="hidden show-lateral_info">
-            <h3 class="sub-title">Proyecto 2</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              totam qui magni asperiores! Iste, sit!
-            </p>
-            <div class="portfolio__card-buttons">
-              <button class="btn">
-                <a href="#contacto">Ropositorio</a>
-              </button>
-              <button class="btn btn--secondary">
-                <a href="#">Ver Demo</a>
-              </button>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <img src="https://picsum.photos/600?random=2" alt="JPG" />
-            <div class="overlay">
-              <div class="portfolio__card-info">
-                <h3 class="sub-title">Proyecto 2</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt totam qui magni asperiores! Iste, sit!
-                </p>
-                <div class="portfolio__card-buttons">
-                  <button class="btn">
-                    <a href="#contacto">Ropositorio</a>
-                  </button>
-                  <button class="btn btn--secondary">
-                    <a href="#">Ver Demo</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="portfolio__card">
-            <img src="https://picsum.photos/600?random=3" alt="JPG" />
-            <div class="overlay">
-              <div class="portfolio__card-info">
-                <h3 class="sub-title">Proyecto 3</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt totam qui magni asperiores! Iste, sit!
-                </p>
-                <div class="portfolio__card-buttons">
-                  <button class="btn">
-                    <a href="#contacto">Ropositorio</a>
-                  </button>
-                  <button class="btn btn--secondary">
-                    <a href="#">Ver Demo</a>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="hidden show-lateral_info">
-            <h3 class="sub-title">Proyecto 3</h3>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-              totam qui magni asperiores! Iste, sit!
-            </p>
-            <div class="portfolio__card-buttons">
-              <button class="btn">
-                <a href="#contacto">Ropositorio</a>
-              </button>
-              <button class="btn btn--secondary">
-                <a href="#">Ver Demo</a>
-              </button>
-            </div>
-          </div>
-          <div class="hidden show-lateral_info">
+          <div
+            class="hidden show-lateral_info"
+            data-aos="zoom-in"
+            data-aos-duration="3000"
+          >
             <h3 class="sub-title">Proyecto 4</h3>
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt
@@ -338,28 +498,30 @@
               <button class="btn">
                 <a href="#contacto">Ropositorio</a>
               </button>
-              <button class="btn btn--secondary">
+              <button class="btn--secondary">
                 <a href="#">Ver Demo</a>
               </button>
             </div>
           </div>
-          <div class="portfolio__card">
+          <div
+            class="portfolio__card"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
             <img src="https://picsum.photos/600?random=4" alt="JPG" />
-            <div class="overlay">
-              <div class="portfolio__card-info">
-                <h3 class="sub-title">Proyecto 4</h3>
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt totam qui magni asperiores! Iste, sit!
-                </p>
-                <div class="portfolio__card-buttons">
-                  <button class="btn">
-                    <a href="#contacto">Ropositorio</a>
-                  </button>
-                  <button class="btn btn--secondary">
-                    <a href="#">Ver Demo</a>
-                  </button>
-                </div>
+            <div class="portfolio__card-info">
+              <h3 class="sub-title">Proyecto 4</h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Incidunt totam qui magni asperiores! Iste, sit!
+              </p>
+              <div class="portfolio__card-buttons">
+                <button class="btn">
+                  <a href="#contacto">Ropositorio</a>
+                </button>
+                <button class="btn--secondary">
+                  <a href="#">Ver Demo</a>
+                </button>
               </div>
             </div>
           </div>
@@ -367,35 +529,35 @@
       </section>
       <!-- CONTACT -->
       <section id="contacto" class="contact">
-        <div class="overlay">
-          <h2 class="title">Contacto</h2>
-          <div class="contact__container">
-            <form class="contact__form" id="contact__form">
-              <input
-                id="contact__form-name"
-                type="text"
-                name="name"
-                placeholder="Ingresa tu nombre *"
-                title="Nombre sólo acepta letras y espacios en blanco"
-                required
-              />
-              <input
-                id="contact__form-email"
-                type="email"
-                name="email"
-                placeholder="Ingresa tu correo *"
-                title="Email debe contener @ejemplo.com"
-                required
-              />
-              <textarea
-                id="contact__form-comments"
-                name="comments"
-                placeholder="Déjame tus comentarios *"
-                required
-              ></textarea>
-              <input class="btn" type="submit" value="Enviar Mensaje" />
-            </form>
-          </div>
+        <h2 class="title" data-aos="zoom-out" data-aos-duration="1000">
+          Contacto
+        </h2>
+        <div class="contact__container">
+          <form class="contact__form" id="contact__form">
+            <input
+              id="contact__form-name"
+              type="text"
+              name="name"
+              placeholder="Ingresa tu nombre *"
+              title="Nombre sólo acepta letras y espacios en blanco"
+              required
+            />
+            <input
+              id="contact__form-email"
+              type="email"
+              name="email"
+              placeholder="Ingresa tu correo *"
+              title="Email debe contener @ejemplo.com"
+              required
+            />
+            <textarea
+              id="contact__form-comments"
+              name="comments"
+              placeholder="Déjame tus comentarios *"
+              required
+            ></textarea>
+            <input class="btn-submit" type="submit" value="Enviar Mensaje" />
+          </form>
         </div>
         <div class="modal-container" id="contact__modal">
           <div class="modal contact__modal">
@@ -414,10 +576,10 @@
     </main>
     <!-- FOOTER -->
     <footer class="footer container">
+      <img src="img/logo/Logo-icon.png" alt="Logo" />
       <h4>Abel Alejandro <span>Acuña</span></h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aperiam
-        aut eaque id neque cum?
+        No programes para solucionar problemas, programa para crear soluciones
       </p>
       <div class="social-links">
         <a
@@ -439,7 +601,14 @@
           ><i class="fa-brands fa-github"></i
         ></a>
       </div>
-      <p class="copyright">CopyRight By Abel Alejandro Acuña</p>
+      <p class="copyright">&copy; Copyright 2022 By Abel Alejandro Acuña</p>
     </footer>
+
+    <!-------AOS SCROLL-------->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!--  -->
   </body>
 </html>

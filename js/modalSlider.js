@@ -4,37 +4,31 @@ const $nextBtn = document.getElementById("modal__next");
 const $prevBtn = document.getElementById("modal__prev");
 const $closeBtn = document.getElementById("modal__close");
 const $portfolioModal = document.getElementById("portfolio__modal-container");
-
-const $portfolioCards = document.querySelectorAll(".portfolio__card");
 const $portfolioModalImg = document.getElementById("portfolio__modal-img");
 
 let carrousel = [];
 let cont = 0;
 
 /*---------SHOW MODAL----------*/
-/* document.addEventListener("click", (e) => {
-  if (e.target.matches(".portfolio .overlay")) {
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".portfolio__card img" || window.innerWidth >= 1024)) {
     e.stopPropagation();
     let card = e.target.parentElement;
     return showModal(card);
   }
-}); */
-
-$portfolioCards.forEach((card) => {
-  card.addEventListener("click", showModal);
 });
 
 /*--------FUNCIONES--------*/
 
-function showModal() {
-  carrousel = this.querySelectorAll("img");
+function showModal(card) {
+  carrousel = card.querySelectorAll("img");
   cont = 0;
 
   $portfolioModal.classList.add("show-modal");
   $portfolioModalImg.src = carrousel[0].src;
-
-  slider();
 }
+
+slider();
 
 function slider() {
   $prevBtn.addEventListener("click", () => {
