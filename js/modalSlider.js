@@ -1,21 +1,22 @@
 //------------SLIDER & MODAL-------------//
 /*-------VARIABLES-------*/
-const $nextBtn = document.getElementById("modal__next");
-const $prevBtn = document.getElementById("modal__prev");
-const $closeBtn = document.getElementById("modal__close");
-const $portfolioModal = document.getElementById("portfolio__modal-container");
-const $portfolioModalImg = document.getElementById("portfolio__modal-img");
+const $nextBtn = document.getElementById("modal__next"),
+  $prevBtn = document.getElementById("modal__prev"),
+  $closeBtn = document.getElementById("modal__close"),
+  $portfolioModal = document.getElementById("portfolio__modal-container"),
+  $portfolioModalImg = document.getElementById("portfolio__modal-img"),
+  $portfolioCards = document.querySelectorAll(".portfolio__card");
 
 let carrousel = [];
 let cont = 0;
 
 /*---------SHOW MODAL----------*/
-document.addEventListener("click", (e) => {
-  if (e.target.matches(".portfolio__card img" || window.innerWidth >= 1024)) {
-    e.stopPropagation();
-    let card = e.target.parentElement;
-    return showModal(card);
-  }
+$portfolioCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    if (window.innerWidth >= 1024) {
+      return showModal(card);
+    }
+  });
 });
 
 /*--------FUNCIONES--------*/
@@ -51,7 +52,6 @@ function slideCarrouselNext() {
       cont = 0;
     }
   }
-  console.log(cont);
   $portfolioModalImg.src = carrousel[cont].src;
 }
 
@@ -62,6 +62,5 @@ function slideCarrouselPrev() {
       cont = carrousel.length - 1;
     }
   }
-  console.log(cont);
   $portfolioModalImg.src = carrousel[cont].src;
 }

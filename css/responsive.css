@@ -38,11 +38,16 @@
 
   /*-----MENU-----*/
   .nav {
+    padding: 1rem 2rem;
     background-color: transparent;
   }
 
   .nav__menu a {
     font-size: 7vw;
+  }
+
+  .nav__logo {
+    max-width: 35vw;
   }
 
   /*-----ABOUT------*/
@@ -111,6 +116,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: all 1s ease-out;
+  }
+
+  .zoom-out {
+    transform: scale(1);
+    opacity: 1;
   }
 
   .title {
@@ -124,6 +137,10 @@
   /*-----HEADER------*/
   .hero__pre-title {
     min-height: 5rem;
+  }
+
+  .nav__logo {
+    max-width: 30vw;
   }
 
   /*-----ABOUT------*/
@@ -239,6 +256,15 @@
     height: 15rem;
   }
 
+  /*-----NAV------*/
+  .nav {
+    padding: 1rem 3rem;
+  }
+
+  .nav__logo {
+    max-width: 20vw;
+  }
+
   /*-----ABOUT------*/
   .about-me {
     margin: 5rem auto;
@@ -273,6 +299,10 @@
   }
 
   /*-----MENU------*/
+  .nav {
+    padding: 1rem 4rem;
+  }
+
   .nav__menu a {
     font-size: 5vw;
   }
