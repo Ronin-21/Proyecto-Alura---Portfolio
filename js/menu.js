@@ -15,13 +15,15 @@ $menuBtn.addEventListener("click", () => {
 /*------AGREGAR UN EVENTLISTENER A CADA LINK------*/
 $links.forEach((link) => {
   /*------EFECTO HOVER AL PASAR POR UN LINK------*/
-  link.addEventListener("mouseenter", (e) => {
-    $linksHover.innerHTML = e.target.dataset.text;
-    $linksHover.style.opacity = 1;
-  });
-  link.addEventListener("mouseleave", (e) => {
-    $linksHover.style.opacity = 0;
-  });
+  if (window.innerWidth >= 1024) {
+    link.addEventListener("mouseenter", (e) => {
+      $linksHover.innerHTML = e.target.dataset.text;
+      $linksHover.style.opacity = 1;
+    });
+    link.addEventListener("mouseleave", (e) => {
+      $linksHover.style.opacity = 0;
+    });
+  }
 
   /*------CERRAR MENU AL CLICKEAR UN LINK------*/
   link.addEventListener("click", () => {

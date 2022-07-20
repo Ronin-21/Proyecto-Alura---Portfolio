@@ -56,7 +56,7 @@ const slideOff = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.1 }
+  { threshold: 0 }
 );
 
 $portfolioCards.forEach((element) => {

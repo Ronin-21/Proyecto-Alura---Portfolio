@@ -395,8 +395,8 @@ span {
 .nav__menu {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 0;
+  right: -100%;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -404,7 +404,6 @@ span {
   justify-content: center;
   gap: 2rem;
   background-color: var(--bg-color_a);
-  clip-path: polygon(20% 0, 100% 0, 100% 100%, 85% 100%);
   overflow: hidden;
   transition: all 0.4s ease-out;
 }
@@ -771,8 +770,7 @@ span {
 }
 
 .show-menu {
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  right: 0;
 }
 
 .hidden {
