@@ -427,7 +427,7 @@ span {
 }
 
 .nav__logo {
-  max-width: 70vw;
+  max-width: 65vw;
   transition: transform 0.3s ease-in;
 }
 
